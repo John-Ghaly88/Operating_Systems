@@ -24,18 +24,17 @@ public class main {
 			System.out.println("Input the time slice");
 			int Q = sc.nextInt();
 			RR(p, Q);
-		}
-		else if (policy.equals("FCFS"))
+		} else if (policy.equals("FCFS"))
 			FCFS(p);
 		else if (policy.equals("SJF"))
 			SJF(p);
 		else if (policy.equals("PSJF"))
 			PSJF(p);
 		else
-			System.out.println("You didn't choose one of the 4 scheduling policies, please check your input and try again");
+			System.out.println(
+					"You didn't choose one of the 4 scheduling policies, please check your input and try again");
 	}
 
-	// Emad
 	public static void RR(Process proc[], int timeslots) {
 		QueueObj q = new QueueObj(proc.length);
 		for (int i = 0; i < proc.length; i++)
@@ -81,9 +80,8 @@ public class main {
 		}
 	}
 
-	// Mazen
 	static void FCFS(Process processes[]) {
-		System.out.println("•First Come First Served (FCFS)");
+		System.out.println("ï¿½First Come First Served (FCFS)");
 		int wt[] = new int[processes.length];
 		int st[] = new int[processes.length];
 
@@ -101,9 +99,8 @@ public class main {
 		}
 	}
 
-	// John
 	public static void SJF(Process proc[]) {
-		System.out.println("•Non-Preemptive Shortest Job First (SJF)");
+		System.out.println("ï¿½Non-Preemptive Shortest Job First (SJF)");
 		int t = 0, complete = 0;
 		QueueObj p = new QueueObj(proc.length);
 		for (int i = 0; i < proc.length; i++)
@@ -145,9 +142,8 @@ public class main {
 		}
 	}
 
-	// John
 	public static void PSJF(Process proc[]) {
-		System.out.println("•Preemptive Shortest Job First (PSJF)");
+		System.out.println("ï¿½Preemptive Shortest Job First (PSJF)");
 		System.out.println("OR Shortest Time-to-Completion First (STCF):");
 		int waitingTime[] = new int[proc.length];
 		int remainingTime[] = new int[proc.length];
